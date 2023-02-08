@@ -1,0 +1,302 @@
+// * {box-sizing: border-box;
+//     padding: 0;
+//     margin: 0;
+//   }
+  
+  .is-sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 2px 24px 0 rgb(0 0 0 / 15%);
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  }
+
+  .head_foot_wrapper {
+    position: relative;
+    .overlay{
+      background-color: rgba(8, 8, 110, 0.397);
+      backdrop-filter: blur(5px);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 85px;
+      left: 0;
+      z-index: 90;
+    }
+  }
+  
+  .nav {
+    width: 100%;
+    // backdrop-filter: blur(7px);
+    box-shadow: 2px 2px 10px grey;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+    .comapany_icon{
+      // border: 2px solid red;
+      margin: 0;
+      height: 100%;
+      .logo{
+        width: 40%;
+        height: 100%;
+        // border: 2px solid hotpink;
+        padding: 0;
+        img{
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    .nav_bar {
+      display: none;
+    }
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      // border: 1px solid tan;
+      .appointment_btn {
+        background-color: var(--clr-primary);
+        padding: 0.75rem 1.5rem;
+        width: fit-content;
+        // margin: auto;
+        border: none;
+        color: white;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.6s;
+        border-radius: 5px;
+      }
+      .appointment_btn:hover {
+        background-color: black;
+        transition: 0.6s;
+      }
+      li {
+        font-weight: bolder;
+        cursor: pointer;
+        transition: 0.8s;
+      }
+      li:hover {
+        color: rgb(7, 131, 202);
+        transition: 0.8s;
+        
+      }
+    }
+  }
+  
+  .footer {
+    background-color: var(--clr-secondary);
+    color: var(--clr-white);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 1rem;
+    padding: 4rem 1rem;
+    text-align: left;
+
+    a{
+      color: white;
+      text-decoration: none;
+  
+    }
+    // a:hover{}
+    .about,
+    .courses,
+    .recent_posts,
+    .contact_us {
+      // border: 1px solid white;
+      .head {
+        hr {
+          width: 70px;
+          color: white;
+          height: 2px;
+          background-color: var(--clr-primary);
+          line-height: 0;
+          margin-top: -8px;
+          border-radius: 10px;
+
+        }
+      }
+      ul {
+        list-style: none;
+
+      }
+    }
+    .about {
+      ul {
+        display: flex;
+        justify-content: left;
+        gap: 0.5rem;
+        li {
+          width: 50px;
+          height: 50px;
+          border-radius: 10px;
+          background-color: rgba(33, 158, 247, 0.205);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: 0.6s;
+        }
+        li:hover {
+          background-color: var(--clr-primary);
+          transition: 0.6s;
+        }
+      }
+    }
+  
+    .courses,
+    .contact_us {
+      ul {
+        // border: 2px solid red;
+  
+        li {
+          display: flex;
+          align-items: center;
+          padding: 0.5rem 0;
+          transition: 0.6s;
+          cursor: pointer;
+          span {
+            padding-left: 1rem;
+          }
+        }
+        li:hover {
+          color: var(--clr-primary);
+          transition: 0.6s;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 1020px) {
+    .footer {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 2rem;
+  
+      .about {
+        ul {
+          display: flex;
+          justify-content: left;
+          gap: 0.5rem;
+          li {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgba(33, 158, 247, 0.205);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 0.6s;
+          }
+          li:hover {
+            background-color: var(--clr-primary);
+            transition: 0.6s;
+          }
+        }
+      }
+  
+      .courses,
+      .contact_us {
+        ul {
+          // border: 2px solid red;
+  
+          li {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+            transition: 0.6s;
+            cursor: pointer;
+            span {
+              padding-left: 1rem;
+            }
+          }
+          li:hover {
+            color: var(--clr-primary);
+            transition: 0.6s;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .nav {
+      .show{
+        opacity: 1;
+        transition: .6s;
+      }
+      .hide{
+        opacity: 0;
+        transition: .6s;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      width: 100%;
+      box-shadow: 2px 2px 10px grey;
+      display: flex;
+      align-items: center;
+      .comapany_icon {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        z-index: 99;
+      }
+      ul {
+        color: white;
+        .appointment_btn{width: fit-content;}
+  
+      }
+      .nav_bar {
+        display: block;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+      }
+      .navbar_content {
+        padding: 4rem 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        transition: all 0.3s ease;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100%;
+        background: rgba(1, 1, 48, 0.822);
+        backdrop-filter: blur(6px);
+        transform: translateX(100%);
+        z-index: 95;
+      }
+  
+      .navbar_content.open {
+        transform: translateX(0);
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    .footer {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  
+  .white{
+    color: white;
+  }
